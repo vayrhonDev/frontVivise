@@ -1,0 +1,328 @@
+
+.body{
+  background: #f0f0f0;
+}
+/* Estilo para la sección del carrito de compras */
+section {
+  background-color: #f0f0f0;
+  padding-right: 12px;
+  border-radius: 5px;
+}
+.button-container {
+  display: flex;
+  position: relative;
+  width: 200px;
+  overflow: hidden;
+}
+
+.slide-button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  flex-grow: 1;
+  transition: background-color 0.3s ease;
+}
+
+.highlight {
+  position: absolute;
+  height: 100%;
+  width: 50%;
+  top: 0;
+  left: 0;
+  background-color: #007bff;
+  opacity: 0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  z-index: -1;
+}
+
+.slide-button:focus {
+  background-color: #0056b3;
+}
+
+#button1:focus ~ .highlight {
+  transform: translateX(0%);
+  opacity: 1;
+}
+
+#button2:focus ~ .highlight {
+  transform: translateX(100%);
+  opacity: 1;
+}
+
+
+input[type="address"],
+input[type="name"],
+input[type="lastname"],
+input[type="mail"],
+input[type="phone"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+button.minus {
+  border-radius: 20px;
+  background-color: #ffffff;
+  padding: 5px 10px; /* Añadir espaciado interno para que el botón sea más grande */
+  border: 1px solid #c8c8c8; /* Añadir un borde */
+  cursor: pointer; /* Cambiar el cursor al pasar por encima */
+}
+button.minus:hover {
+  background-color: rgb(255, 39, 39);
+}
+
+/* Estilos para el botón con la clase "plus" */
+button.plus {
+  border-radius: 20px;
+  background-color: #fff;
+  padding: 5px 10px; /* Añadir espaciado interno para que el botón sea más grande */
+  border: 1px solid #c8c8c8; /* Añadir un borde */
+  cursor: pointer; /* Cambiar el cursor al pasar por encima */
+}
+
+button.plus:hover{
+  background-color: rgb(2, 217, 2);
+}
+/* Estilo para la lista de productos en el carrito */
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Estilo para cada elemento de producto en la lista */
+li {
+  display: flex;
+  flex-direction: column; /* Cambio a dirección de columna para alinear hacia abajo */
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 10px 0;
+  background-color: #fff;
+  border-radius: 5px;
+}
+
+/* Estilo para la imagen del producto */
+img {
+  width: 200px;
+  height: 200px;
+  margin-right: 20px;
+}
+
+/* Estilo para el título del producto */
+h6 {
+  font-size: 18px;
+  margin: 0;
+}
+
+/* Estilo para la descripción del producto */
+p {
+  font-size: 14px;
+  color: #555;
+  margin-top: 10px; /* Espacio entre el nombre y la descripción */
+}
+
+/* Estilo para la cantidad de productos */
+.carrito-cantidad {
+  font-size: 16px;
+  font-weight: bold;
+  color: #000000;
+  margin-top: 10px; /* Espacio entre la descripción y la cantidad */
+}
+
+/* Estilo para el botón de incrementar y decrementar (si lo habilitas) */
+/* .btn-success,
+.btn-danger {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+  margin-top: 5px;
+  font-size: 14px;
+} */
+
+.btn-danger {
+  background-color: #dc3545;
+}
+
+button[type=submit] {
+  margin-top: 2em;
+  padding: 10px;
+  width: 30%;
+  background-color: #000000;
+  color: #fff;
+  border: none;
+  display: inline;
+  align-items: center;
+  border-radius: 15px;
+  cursor: pointer;
+
+
+}
+button[type="submit"]:hover {
+  background-color: #1e1e1e;
+}
+
+button[type=submitC] {
+  padding: 11px;
+  width: 100%;
+  background-color: #000000;
+  color: #fff;
+  border: none;
+  display: inline;
+  align-items: center;
+  border-radius: 5px;
+  cursor: pointer;
+
+
+}
+button[type="submitC"]:hover {
+  background-color: #1e1e1e;
+}
+button[type=submitP] {
+  padding: 15px;
+  width: 50%;
+  background-color: #000000;
+  color: #fff;
+  border: none;
+  display: inline;
+  align-items: center;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+
+
+}
+button[type="submitP"]:hover {
+  background-color: #1e1e1e;
+}
+
+:host ::ng-deep .p-checkbox .p-checkbox-box {
+  background-color: #ffffff;
+  border-color: #000000;
+}
+:host ::ng-deep .p-checkbox .p-checkbox-box.p-highlight {
+  background-color: #000000;
+  border-color:  #fff;
+}
+
+:host ::ng-deep .p-checkbox .p-checkbox-box:focus {
+  outline: none;
+}
+
+.div-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.botones{
+  display: flex;
+  align-items: center;
+  align-content: center;
+  flex-direction: column;
+  padding-bottom: 20px;
+}
+
+.switch{
+  position: relative;
+  width: 300px;
+  height: 40px;
+  border-radius: 25px;
+}
+
+.switch input{
+  appearance: none;
+  width: 300px;
+  height: 40px;
+  border-radius: 25px;
+  background: #b7b7b7;
+  outline: none;
+}
+
+.switch input::before,
+.switch input::after{
+  z-index: 2;
+  position: absolute;
+  top: 56%;
+  transform: translateY(-60%);
+  font-weight: bolder;
+}
+
+.switch input::before{
+  content: "Retirar";
+  left: 50px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.switch input::after{
+  content: "Delivery";
+  right: 50px;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.switch input:checked{
+  background-color: #f0f0f0;
+}
+
+.switch label{
+  z-index: 1;
+  position: absolute;
+  border-radius: 20px;
+}
+
+.switch input{
+  transition: 0.25s;
+}
+
+.switch input:checked::after{
+  color: #ffffff;
+  transition: color 0.5s;
+}
+.switch input:checked::before{
+  color: #000000;
+  transition: color 0.5s;
+}
+
+.switch input:checked+label{
+  left: 150px;
+  right: 0px;
+  height: 40px;
+  border-radius: 25px;
+  background: #000000;
+  transition: left 0.4s 0.2s, right 0.5s;
+  cursor: pointer;
+}
+
+.switch input:not(:checked){
+  background: #f0f0f0;
+  transition: background 0.4s;
+}
+
+.switch input:not(:checked)::before{
+  color: #ffffff;
+  transition: color 0.5s;
+}
+
+.switch input:not(:checked)::after{
+  color: #000000;
+  transition: color 0.5s 0.2s;
+}
+
+.switch input:not(:checked) +label{
+  left: 0px;
+  right: 150px;
+  height: 40px;
+  background: #000000;
+  transition: left 0.5s, right 0.4s 0.2s, background;
+  cursor: pointer;
+  border-color: #000000;
+}

@@ -1,0 +1,329 @@
+body {
+  position: relative;
+  padding-bottom: 7em;
+  min-height: 100vh;
+}
+
+/* Estilo general de la barra de navegación de pestañas */
+.nav-tabs {
+  background-color: #f8f9fa; /* Color de fondo de la barra de navegación */
+  border-bottom: 2px solid #dee2e6; /* Línea inferior de separación */
+}
+
+/* Estilo de las pestañas */
+.nav-tabs .nav-link {
+  background-color: #f085cd; /* Color de fondo de las pestañas */
+  border: #000000 !important; /* Borde de las pestañas */
+  border-radius: 25px; /* Borde redondeado */
+  margin-right: 2px;
+  color: #fff;
+}
+
+/* Estilo de la pestaña activa */
+.nav-tabs .nav-link.active {
+  background-color: #b15392; /* Color de fondo de la pestaña activa */
+  color: #ffffff; /* Color del texto de la pestaña activa */
+}
+
+/* Estilo del contenido de las pestañas */
+.tab-content {
+  padding: 20px; /* Espacio interno del contenido de las pestañas */
+  border-radius: 0; /* Borde redondeado */
+}
+
+/* Estilo para el contenedor principal del carrito */
+.offcanvas {
+  background-color: #fff; /* Color de fondo del carrito */
+}
+
+/* Estilo para el encabezado del carrito */
+.offcanvas-title {
+  font-size: 20px; /* Tamaño de fuente del título del carrito */
+  margin-bottom: 10px;
+}
+
+/* Estilo para el botón de cierre del carrito */
+.btn-close {
+  color: #000; /* Color del icono de cierre del carrito */
+  font-size: 24px;
+  position: relative;
+}
+.offcanvas-body{
+  position: relative;
+}
+
+/* Estilo para cada elemento de producto en el carrito */
+.offcanvas-body ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.offcanvas-body ul li {
+  border-bottom: 1px solid #ccc;
+  padding: 10px 0;
+}
+.offcanvas-body .botonIr {
+  margin-top: 0.4em;
+  display: block;
+  width: 100%;
+  align-items: center;
+  padding: 10px;
+  background-color: #f085cd;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  font-weight: bold;
+  font-family:'Times New Roman', Times, serif ;
+  margin-bottom: 0.4em;
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1); /* Añade una sombra si lo deseas */
+  text-align: center;
+  text-decoration: none;
+}
+
+.offcanvas-body .botonIr:hover {
+  background-color: #b15392;
+}
+/* Estilo para los botones de incremento y decremento */
+
+/* Estilos para el botón con la clase "minus" */
+button.minus {
+  border-radius: 20px;
+  background-color: #ffffff;
+  padding: 5px 10px; /* Añadir espaciado interno para que el botón sea más grande */
+  border: 1px solid #c8c8c8; /* Añadir un borde */
+  cursor: pointer; /* Cambiar el cursor al pasar por encima */
+}
+button.minus:hover {
+  background-color: rgb(255, 39, 39);
+}
+
+/* Estilos para el botón con la clase "plus" */
+button.plus {
+  border-radius: 20px;
+  background-color: #fff;
+  padding: 5px 10px; /* Añadir espaciado interno para que el botón sea más grande */
+  border: 1px solid #c8c8c8; /* Añadir un borde */
+  cursor: pointer; /* Cambiar el cursor al pasar por encima */
+}
+
+button.plus:hover{
+  background-color: rgb(2, 217, 2);
+}
+
+/* Estilos para el botón de eliminación con la clase "carrito-eliminar" */
+
+/* Estilos para el botón "Borrar Carrito" */
+.carrito-eliminar i.pi-trash {
+  margin-right: 10px; /* Espacio entre el icono y el texto */
+  color: red;
+}
+
+/* Estilo para la cantidad de productos */
+.carrito-cantidad {
+  font-weight: bold;
+}
+
+.carrito-eliminar{
+  color: blue;
+  text-decoration: none;
+}
+
+.carrito-eliminar:hover{
+  color: rgb(4, 4, 160);
+  text-decoration:underline;
+  cursor: pointer;
+}
+
+.offcanvas-body .imgCart img{
+  width:"150px";
+  height:"200px"
+}
+
+/* Estilo para el botón "Ir a Pagar" */
+
+
+.product-item {
+
+  .product-item-content {
+    border: 1px solid var(--surface-d);
+    border-radius: 30px;
+    margin: 1rem;
+    text-align: center;
+    padding: 2rem ;
+  }
+
+  .product-image {
+    width: 30%;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  }
+}
+
+.carousel-container {
+  max-width: 100%;
+  margin: 0 auto;
+  margin-top: 10px;
+}
+
+
+.product-card {
+  text-align: center;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin: 0 1rem;
+
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.product-details {
+  margin-top: 0.5rem;
+}
+
+/* Cambiar el color del texto de los nav-links a negro */
+.nav-link {
+
+  margin-top: 10px;
+  color: black;
+
+}
+
+/* Cambiar el color del texto de los nav-links activos a negro */
+.nav-link.active {
+  color: black;
+}
+
+/* Cambiar el color del fondo del nav-link activo si lo deseas */
+.nav-link.active {
+  background-color: transparent; /* Puedes establecer otro color si lo prefieres */
+}
+
+
+/* CARRITO */
+
+.btnCarrito{
+  background-color: #f085cd;
+  border-color: transparent;
+  border-radius: 10px;
+  color: #fff
+}
+
+.btnCarrito i{
+  margin: 10px;
+}
+
+/* Estilos para el botón del carrito */
+.carrito-button {
+  background-color: #f085cd;
+  border: transparent;
+  border-radius: 15px;
+  width: 50px;
+  position: fixed;
+  height: 50px;
+  top: 70px; /* Posición inicial en la parte superior */
+  right: 20px;
+  transition: top 0.3s; /* Transición suave al cambiar la posición */
+  z-index: 999;
+}
+
+.carrito-button i{
+  color: #fff
+}
+
+.carrito-counter {
+  position: absolute;
+  top: 0px; /* Ajusta la posición vertical según tu diseño */
+  right: 3px; /* Ajusta la posición horizontal según tu diseño */
+  background-color:transparent;
+  color: #fff;
+  border-radius: 100%;
+  padding: 4px 8px;
+  font-size: 10px;
+  font-weight: bold;
+}
+.carrito-button button {
+  background-color: transparent;
+  padding: 10px 20px;
+  height: 50px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+
+
+/* Estilos para el botón cuando se desplaza hacia abajo */
+.carrito-button.scrolled {
+  top: 50px; /* Nueva posición al hacer scroll */
+}
+button[type="button2"] {
+  position: absolute;
+  bottom: 0;
+  margin-top: 4em;
+  display: block;
+  padding: 10px;
+  background-color: #f085cd;
+  color: #fff;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  margin-bottom: 0.4em;
+  margin-right: 10px;
+}
+button[type="button2"]:hover {
+  background-color: #b15392;
+}
+
+
+
+button[type="button1"] {
+  position: absolute;
+  bottom: 0;
+  margin-top: 0.4em;
+  display: block;
+  width: 80%;
+  align-items: center;
+  padding: 10px;
+  background-color: #f085cd;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  font-weight: bold;
+  font-family:'Times New Roman', Times, serif ;
+  margin-bottom: 0.4em;
+}
+button[type="button1"]:hover {
+  background-color: #b15392;
+}
+
+button[type="button3"] {
+  margin-top: 2em;
+  padding: 10px;
+  width: 100%;
+  background-color: #f085cd;
+  color: #fff;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+}
+button[type="button3"]:hover {
+  background-color: #b15392;
+}
+
+/* button[type="button4"] {
+  padding: 10px;
+  background-color: #f085cd;
+  color: #fff;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+}
+button[type="button4"]:hover {
+  background-color: #b15392;
+} */

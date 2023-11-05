@@ -1,0 +1,206 @@
+<body>
+  <app-navbar></app-navbar>
+
+<ul class="nav nav-tabs" style="justify-content: center; border: none; background-color: #fff;" id="myTab"
+  role="tablist">
+  <li class="nav-item" role="presentation">
+    <button class="nav-link active" id="Pasteleria-tab" data-bs-toggle="tab" data-bs-target="#Pasteleria-tab-pane"
+      type="button4" role="tab" aria-controls="Pasteleria-tab-pane" aria-selected="true">Pasteleria</button>
+  </li>
+  <li class="nav-item" role="presentation">
+    <button class="nav-link" id="Confiteria-tab" data-bs-toggle="tab" data-bs-target="#Confiteria-tab-pane"
+      type="button4" role="tab" aria-controls="Confiteria-tab-pane" aria-selected="false">Confiteria</button>
+  </li>
+  <li class="nav-item" role="presentation">
+    <button class="nav-link" id="Frutos-tab" data-bs-toggle="tab" data-bs-target="#Frutos-tab-pane" type="button4"
+      role="tab" aria-controls="Frutos-tab-pane" aria-selected="false">Frutos Secos</button>
+  </li>
+</ul>
+<!-- <li class="nav-item" role="presentation">
+    <button class="nav-link" id="disabled-tab" data-bs-toggle="tab" data-bs-target="#disabled-tab-pane" type="button" role="tab" aria-controls="disabled-tab-pane" aria-selected="false" disabled>Disabled</button>
+  </li> -->
+
+
+
+<button *ngIf="this.cartNumber > 0" class="carrito-button" (click)="cartDetails()" id="carritoButton" type="button"
+  data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+  <i class="pi pi-shopping-cart"
+    style="font-size: 1.5rem; align-content: center; align-items: center; margin-top: 8px; color: rgb(255, 255, 255);"></i>
+  <span id="numbersProducts" class="carrito-counter ">{{
+    this.cartNumber }}</span>
+</button>
+
+<div class="offcanvas offcanvas-end" tabindex="-2 " id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasRightLabel">Carrito
+
+      <!-- <span *ngIf="this.cantidadProductosEnCarrito > 0" id="numbersProducts" class="carrito-counter ">{{ this.total }}</span> -->
+    </h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    <div *ngIf="this.cartNumber === 0">
+      <p style="text-align: center;">No hay productos en el carrito.</p>
+      <button type="button3" data-bs-dismiss="offcanvas" aria-label="Close">Agregar</button>
+    </div>
+    <div *ngFor="let getCartDetail of getCartDetails">
+      <ul>
+        <li>
+          <div class="row">
+            <div class="col-6">
+              <img src="favicon.ico" alt="s" style=" width: 150px;  height:150px">
+            </div>
+            <div class="col-6" style="background-color: rgb(255, 255, 255);">
+              <h6>{{ getCartDetail.nombre }}</h6>
+              <p>{{ getCartDetail.descripcion }}</p>
+              <p>${{ getCartDetail.cantidad * getCartDetail.precio }}</p>
+              <div>
+                <button class="minus" (click)="decrementar(getCartDetail.id_producto, getCartDetail.cantidad )">
+                  <i class="pi pi-minus"></i></button>
+                <span style=" margin-right: 5px;margin-left: 5px;font-size: 20px;" class="carrito-cantidad">{{
+                  getCartDetail.cantidad }}</span>
+                <button class="plus"
+                  (click)="incrementar(getCartDetail.id_producto, getCartDetail.cantidad )">
+                  <i class="pi pi-plus"></i></button>
+              </div>
+
+
+            </div>
+          </div>
+          <div style="margin-left: 55%; margin-top: 20px;" class="carrito-acciones">
+            <a class="carrito-eliminar" (click)="eliminarProducto(getCartDetail)">
+              <i class="pi pi-trash" style="margin-right: 10px;">
+              </i>Eliminar Producto</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <a *ngIf="this.cartNumber > 0" class="carrito-eliminar" (click)="quitarTodos()">
+      <i class="pi pi-trash" style="margin-right: 10px;"></i>Borrar Carrito</a>
+    <div *ngIf="this.cartNumber >0" class="row">
+      <div class="col-6" style="position: relative; margin-top: 10px;">
+        <h4>Total: {{total}}</h4>
+      </div>
+      <div class="col-6">
+        <a class="botonIr" href="/cart">Ir a Pagar
+        </a>
+      </div>
+
+    </div>
+
+  </div>
+</div>
+<div class="tab-content" id="myTabContent">
+  <div class="tab-pane fade show active" id="Pasteleria-tab-pane" role="tabpanel" aria-labelledby="home-tab"
+    tabindex="0">
+
+    <!--  CARRUSEL 1   -->
+    <p-carousel [value]="productos" [numVisible]="4" [numScroll]="4" [circular]="false">
+      <ng-template pTemplate="header">
+      </ng-template>
+      <ng-template let-productos pTemplate="item">
+        <div class="product-item">
+          <div class="product-item-content">
+            <div class="mb-3">
+              <!--<img src="assets/showcase/images/demo/product/{{productos.imagen_producto}}" [alt]="productos.nombre" class="product-image" />-->
+              <img src="favicon.ico" [alt]="productos.nombre" class="product-image" />
+            </div>
+            <div>
+              <h4 class="mb-1">{{productos.nombre}}</h4>
+              <h6 class="mt-0 mb-3">${{productos.precio}}</h6>
+
+              <!-- <span>En Stock: {{productos.cantidad_stock}}</span> -->
+              <!-- <div class="car-buttons mt-5">
+                          <p-button type="button" styleClass="p-button p-button-rounded mr-2" icon="pi pi-search"></p-button>
+                          <p-button type="button" styleClass="p-button-success p-button-rounded mr-2" icon="pi pi-star-fill"></p-button>
+                          <p-button type="button" styleClass="p-button-help p-button-rounded" icon="pi pi-cog"></p-button>
+                      </div>-->
+            </div>
+          </div>
+        </div>
+      </ng-template>
+    </p-carousel>
+
+    <p-carousel [value]="productos" [numVisible]="4" [numScroll]="4" [circular]="false">
+      <ng-template pTemplate="header">
+      </ng-template>
+      <ng-template let-producto pTemplate="item">
+        <div class="product-item">
+          <div class="product-item-content">
+            <div class="mb-3">
+              <!--<img src="assets/showcase/images/demo/product/{{productos.imagen_producto}}" [alt]="productos.nombre" class="product-image" />-->
+              <img src="favicon.ico" [alt]="productos.nombre" class="product-image" />
+
+            </div>
+            <div>
+              <h4 class="mb-1">{{producto.nombre}}</h4>
+              <h6 class="mt-0 mb-3">${{producto.precio}}</h6>
+
+              <button class="btnCarrito" (click)="goToCart(producto);">Agregar al carrito
+              </button>
+
+              <!-- <span>En Stock: {{productos.cantidad_stock}}</span> -->
+              <!-- <div class="car-buttons mt-5">
+                          <p-button type="button" styleClass="p-button p-button-rounded mr-2" icon="pi pi-search"></p-button>
+                          <p-button type="button" styleClass="p-button-success p-button-rounded mr-2" icon="pi pi-star-fill"></p-button>
+                          <p-button type="button" styleClass="p-button-help p-button-rounded" icon="pi pi-cog"></p-button>
+                      </div>-->
+            </div>
+          </div>
+        </div>
+      </ng-template>
+    </p-carousel>
+
+    <!--  CARRUSEL 2   -->
+    <p-carousel [value]="productos" [numVisible]="4" [numScroll]="4" [circular]="false">
+      <ng-template pTemplate="header">
+      </ng-template>
+      <ng-template let-producto pTemplate="item">
+        <div class="producto-item">
+          <div class="product-item-content">
+            <div class="mb-3">
+              <img src="favicon.ico" [alt]="producto.nombre" class="product-image" />
+            </div>
+            <div>
+              <h4 class="mb-1">{{ producto.nombre }}</h4>
+              <h6 class="mt-0 mb-3">${{ producto.precio }}</h6>
+            </div>
+          </div>
+        </div>
+      </ng-template>
+    </p-carousel>
+
+    <!--codigo de los botones-->
+    <!-- <span>En Stock: {{productos.cantidad_stock}}</span> -->
+    <!-- <div class="car-buttons mt-5">
+      <p-button type="button" styleClass="p-button p-button-rounded mr-2" icon="pi pi-search"></p-button>
+      <p-button type="button" styleClass="p-button-success p-button-rounded mr-2" icon="pi pi-star-fill"></p-button>
+      <p-button type="button" styleClass="p-button-help p-button-rounded" icon="pi pi-cog"></p-button>
+       </div>-->
+
+  </div>
+  <div class="tab-pane fade" id="Confiteria-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
+    <div class="carousel-container">
+      <p-carousel [value]="productos" [numVisible]='3'>
+        <ng-template let-productos pTemplate="item">
+          <div class="product-card">
+            <img src="favicon.ico" alt="{{ productos.nombre }}" />
+            <div class="product-details">
+              <h4>{{ productos.nombre }}</h4>
+              <p>Precio: ${{ productos.precio }}</p>
+            </div>
+          </div>
+        </ng-template>
+      </p-carousel>
+    </div>
+
+  </div>
+  <!-- <div class="tab-pane fade" id="Confiteria" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">...</div> -->
+  <div class="tab-pane fade" id="Frutos-tab-pane" role="tabpanel" aria-labelledby="disabled-tab" tabindex="0">...
+  </div>
+</div>
+
+<app-footer></app-footer>
+
+</body>
+

@@ -1,0 +1,114 @@
+/* styles.css */
+
+/* Estilo para el formulario */
+h2{
+  font-size: 36px;
+  font-family:'Times New Roman', Times, serif ;
+  text-align: center;
+  margin: 20px 20px;
+}
+
+form {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f5f5f5;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  margin-bottom: 3em;
+}
+
+/* Estilo para las etiquetas de formulario */
+.form-label {
+  font-weight: bold;
+}
+
+label{
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  font-family:'Times New Roman', Times, serif ;
+}
+
+/* Estilo para los campos de entrada */
+.form-control {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  transition: border-color 0.2s;
+}
+
+.form-control:focus {
+  border-color: #ffffff; /* Cambia el color del borde al enfocar */
+}
+
+/* Estilo para el botón de envío */
+.btn-primary {
+  background-color: #f085cd;
+  color: #fff;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #b15392; /* Cambia el color al pasar el mouse */
+}
+/* ventana */
+
+/* Estilo para el fondo oscuro de fondo */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro semi-transparente */
+  z-index: 100; /* Valor alto para que esté por encima de otros elementos */
+}
+
+/* Estilo para el cuadro de diálogo modal */
+.modal-dialog {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  max-width: 30%;
+  margin: 0 auto;
+  background-color: #f085cd; /* Fondo blanco *//* Sombra suave */
+  border-radius: 9px;
+}
+
+/* Estilo para el encabezado del modal */
+.modal-header {
+  background-color: #f085cd; /* Color de fondo del encabezado */
+  color: #ffffff; /* Color del texto del encabezado */
+  border: transparent;
+}
+
+/* Estilo para el título del modal */
+.modal-title {
+  margin: 0;
+}
+
+/* Estilo para el botón de cierre del modal */
+.boton-ventana {
+  background-color: transparent;
+  border: none !important;
+  color: #000000 !important;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+/* Estilo para el cuerpo del modal */
+.modal-body {
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 9px;
+}
+
+/* Estilo para mostrar el modal */
+.show {
+  display: block;
+}
+

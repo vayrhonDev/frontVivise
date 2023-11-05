@@ -1,0 +1,40 @@
+<nav class="navbar navbar-expand-lg" style="justify-content: end;">
+  <div class="container">
+    <a class="navbar-brand" [routerLink]="['']" routerLinkActive="router-link-active">
+      <span class="logo-text">Vivise</span>
+      <img src="favicon.ico" alt="">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link custom-link" style="font-family:'Times New Roman', Times, serif" [routerLink]="['']" routerLinkActive="router-link-active">Inicio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link custom-link" style="font-family:'Times New Roman', Times, serif" [routerLink]="['/productos']" routerLinkActive="router-link-active">Productos</a>
+        </li>
+        <!-- <li class="nav-item">
+          <a class="nav-link custom-link" style="font-family:'Times New Roman', Times, serif" [routerLink]="['']" routerLinkActive="router-link-active">Acerca de</a>
+        </li> -->
+        <!-- <li class="nav-item">
+          <a class="nav-link custom-link" style="font-family:'Times New Roman', Times, serif" [routerLink]="['/contacto']" routerLinkActive="router-link-active">Contacto</a>
+        </li> -->
+        <!-- <li class="nav-item">
+          <a class="nav-link custom-link" style="font-family:'Times New Roman', Times, serif" [routerLink]="['/login']" routerLinkActive="router-link-active" >Iniciar Sesión</a>
+        </li> -->
+        <li class="nav-item">
+          <div class="cart-icon" [routerLink]="['/cart']" routerLinkActive="router-link-active">
+            <i title="Pagar" class="pi pi-shopping-bag"></i>
+            <div *ngIf="this.cartNumber > 0 " class="cart-value">
+              {{this.cartNumber}}
+            </div>
+            <!-- <span *ngIf="this.cantidadProductosEnCarrito > 0" id="numbersProducts" class="carrito-counter ">{{ this.cantidadProductosEnCarrito }}</span> -->
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

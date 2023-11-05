@@ -1,0 +1,107 @@
+/* Estilos para el navbar */
+.navbar {
+  background-color: #f085cd; /* Color de fondo del navbar */
+  border-bottom: 2px solid #ffffff; /* Borde inferior del navbar */
+  padding: 10px 0; /* Espaciado interior vertical del navbar */
+}
+
+.nav-link{
+  color: #fff;
+}
+/* Contenedor del navbar */
+.navbar .container {
+  display: flex;
+  justify-content: space-between; /* Coloca los elementos a la izquierda y a la derecha */
+  align-items: center; /* Centra verticalmente los elementos del navbar */
+  max-width: 1200px; /* Ancho máximo del contenedor */
+  margin: 0 auto; /* Centra el contenedor horizontalmente */
+  padding: 0 20px; /* Espaciado interior horizontal del contenedor */
+}
+
+
+/* Estilos para el logotipo o marca con la nueva fuente "Dancing Script" */
+.navbar .navbar-brand {
+  font-family: 'Dancing Script', cursive; /* Fuente personalizada */
+  font-size: 24px;
+  text-decoration: none;
+  color: #000000; /* Color del texto del logotipo */
+}
+
+/* Estilos para la lista de navegación */
+.navbar .navbar-nav {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+.custom-link.active {
+  background-color: #007bff; /* Cambia el color de fondo del elemento activo */
+  color: #ffffff; /* Cambia el color del texto del elemento activo */
+}
+
+/* Estilo para el texto del logotipo */
+.navbar .navbar-brand .logo-text {
+  font-size: 24px;
+  text-decoration: none;
+  color: #333; /* Color del texto del logotipo */
+  margin-right: 10px; /* Espacio entre el texto y la imagen */
+}
+
+/* Estilo para la imagen del logotipo */
+.navbar .navbar-brand .logo-image {
+  width: 40px; /* Tamaño de la imagen */
+  height: 40px; /* Tamaño de la imagen */
+  border-radius: 50%; /* Forma circular */
+  object-fit: cover; /* Ajusta la imagen dentro del círculo */
+}
+/* Estilos para los elementos de navegación */
+.navbar .nav-item {
+  margin-right: 20px; /* Espacio entre elementos de navegación */
+}
+
+/* Estilos para los enlaces de navegación */
+.navbar .nav-link {
+  text-decoration: none;
+  color: #000000; /* Color del texto de los enlaces */
+  font-size: 18px; /* Tamaño de fuente de los enlaces */
+}
+
+/* Estilos al pasar el cursor sobre los enlaces */
+.navbar .nav-link:hover {
+  color: #ffffff;
+  /*text-decoration: underline; /* Subraya los enlaces al pasar el cursor */
+}
+
+
+
+/*  tabmenu de productos    */
+
+.nav nav-tabs{
+  justify-content: center
+}
+
+.cart-icon{
+  position: relative;
+  cursor: pointer;
+  align-items: center;
+
+}
+
+.cart-icon i{
+  font-size: 24px;
+  margin-top: 8px;
+  align-items: center;
+}
+
+
+.cart-value{
+  position: absolute;
+  top: 0px;
+  right: -13px;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  padding: 0px 5px 0px 5px;
+  font-weight: 800;
+  font-size: 13px;
+}

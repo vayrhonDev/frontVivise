@@ -1,0 +1,126 @@
+body {
+  position: relative;
+  padding-bottom: 10%;
+  min-height: 100vh;
+
+}
+/* Estilos generales */
+
+.offcanvas {
+  background-color: #fff; /* Color de fondo del carrito */
+}
+
+/* Estilo para el encabezado del carrito */
+.offcanvas-title {
+  font-size: 20px; /* Tamaño de fuente del título del carrito */
+  margin-bottom: 10px;
+}
+
+/* Estilo para el botón de cierre del carrito */
+.btn-close {
+  color: #000; /* Color del icono de cierre del carrito */
+  font-size: 24px;
+  position: relative;
+}
+.offcanvas-body{
+  position: relative;
+}
+
+/* Estilo para cada elemento de producto en el carrito */
+.offcanvas-body ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.offcanvas-body ul li {
+  border-bottom: 1px solid #ccc;
+  padding: 10px 0;
+}
+.offcanvas-body .botonIr {
+  margin-top: 0.4em;
+  display: block;
+  width: 100%;
+  align-items: center;
+  padding: 10px;
+  background-color: #f085cd;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  font-weight: bold;
+  font-family:'Times New Roman', Times, serif ;
+  margin-bottom: 0.4em;
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1); /* Añade una sombra si lo deseas */
+  text-align: center;
+  text-decoration: none;
+}
+
+.offcanvas-body .botonIr:hover {
+  background-color: #b15392;
+}
+/* Estilo para los botones de incremento y decremento */
+.btn-success,
+.btn-danger {
+  font-size: 16px;
+  padding: 5px 10px;
+  margin: 0 5px;
+}
+
+/* Estilo para la cantidad de productos */
+.carrito-cantidad {
+  font-weight: bold;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Estilos para el encabezado */
+header {
+  background-color: #333; /* Color de fondo */
+  color: #fff; /* Color del texto */
+  padding: 20px; /* Espaciado interno */
+  text-align: center; /* Alineación del contenido */
+}
+
+h1 {
+  font-size: 36px; /* Tamaño de fuente del título principal */
+  margin: auto;
+  text-align: center;
+}
+
+/* Estilos para la imagen principal
+img {
+  max-width: 100%; /* Para que la imagen sea responsive
+  height: auto; /* Evita que la imagen se distorsione
+  margin: 20px 0; /* Espaciado externo superior e inferior
+} */
+
+/* Estilos para las secciones de productos */
+section {
+  padding: 20px; /* Espaciado interno de las secciones */
+}
+
+h2 {
+  font-size: 24px; /* Tamaño de fuente de los títulos de sección */
+}
+
+
+
+.product-item {
+
+  .product-item-content {
+    border: 1px solid var(--surface-d);
+    border-radius: 25px;
+    margin: 1rem;
+    text-align: center;
+    padding: 2rem ;
+  }
+
+  .product-image {
+    width: 70%;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23)
+  }
+}

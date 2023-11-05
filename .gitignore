@@ -4,7 +4,11 @@
 /dist
 /tmp
 /out-tsc
+/src/environments/environment.local.ts
 /bazel-out
+
+.angular
+.editorconfig
 
 # Node
 /node_modules

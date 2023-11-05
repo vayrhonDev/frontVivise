@@ -1,0 +1,50 @@
+<button *ngIf="this.cartNumber > 0" class="carrito-button" (click)="cartDetails()" id="carritoButton" type="button"
+  data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+  <i class="pi pi-shopping-cart"
+    style="font-size: 1.5rem; align-content: center; align-items: center; margin-top: 8px; color: rgb(255, 255, 255);"></i>
+  <span id="numbersProducts" class="carrito-counter ">{{
+    this.cartNumber }}</span>
+</button>
+
+<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasRightLabel">Carrito
+
+      <!-- <span *ngIf="this.cantidadProductosEnCarrito > 0" id="numbersProducts" class="carrito-counter ">{{ this.total }}</span> -->
+    </h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    <div *ngIf="this.cartNumber === 0">
+      <p style="text-align: center;">No hay productos en el carrito.</p>
+      <button type="button3" data-bs-dismiss="offcanvas" aria-label="Close">Agregar</button>
+    </div>
+    <div *ngFor="let getCartDetail of getCartDetails">
+      <ul>
+        <li>
+          <h6>{{ getCartDetail.nombre }}</h6>
+          <p>Descripción: {{ getCartDetail.descripcion }}</p>
+          <p>Precio: {{ getCartDetail.cantidad * getCartDetail.precio }}</p>
+          <div class="carrito-acciones">
+            <button class="btn btn-sm btn-success" (click)="incrementar(getCartDetail.id_producto, getCartDetail.cantidad )">+</button>
+            <span class="carrito-cantidad">{{ getCartDetail.cantidad }}</span>
+            <button class="btn btn-sm btn-danger" (click)="decrementar(getCartDetail.id_producto, getCartDetail.cantidad )">-</button>
+            <a class="carrito-eliminar" (click)="eliminarProducto(getCartDetail)">Eliminar Producto</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <a *ngIf="this.cartNumber > 0" class="carrito-eliminar" (click)="quitarTodos()">Borrar Carrito</a>
+    <div *ngIf="this.cartNumber > 0" class="row">
+      <div  class="col-6" style="position: relative; margin-top: 10px;">
+        <h4>Total: {{total}}</h4>
+      </div>
+      <div class="col-6">
+        <a class="botonIr" href="/cart">Ir a Pagar
+        </a>
+      </div>
+
+    </div>
+
+  </div>
+</div>
