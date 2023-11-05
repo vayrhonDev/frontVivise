@@ -2,7 +2,7 @@
 import { Injectable } from '@angular/core';
 import { Observable, firstValueFrom } from 'rxjs';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
-import { Producto } from '../app/pages/carrito/carrito/interfaceProducto';
+import { Producto } from '../app/pages/carrito/interfaceProducto';
 
 
 @Injectable({

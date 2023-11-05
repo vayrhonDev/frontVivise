@@ -6,13 +6,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { InicioComponent } from './pages/inicio/inicio.component';
 import { ProductosComponent } from './pages/productos/productos.component';
 import { AppComponent } from './app.component';
-import { ContactoComponent } from './pages/contacto/contacto/contacto.component';
+import { ContactoComponent } from './pages/contacto/contacto.component';
 import { LoginComponent } from './pages/login/login.component';
 import { RegistroComponent } from './pages/registro/registro.component';
-import { FooterComponent } from './pages/footer/footer/footer.component';
-import { NavbarComponent } from './pages/navbar/navbar/navbar.component';
-import { BotonCarritoComponent } from './pages/botonCarrito/boton-carrito/boton-carrito.component';
-import { CarritoComponent } from './pages/carrito/carrito/carrito.component';
+import { FooterComponent } from './pages/footer/footer.component';
+import { NavbarComponent } from './pages/navbar/navbar.component';
+import { BotonCarritoComponent } from './pages/botonCarrito/boton-carrito.component';
+import { CarritoComponent } from './pages/carrito/carrito.component';
 
 //modulos
 import { BrowserModule } from '@angular/platform-browser';

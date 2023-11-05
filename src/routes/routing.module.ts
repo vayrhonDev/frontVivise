@@ -8,7 +8,7 @@ import { RouterModule } from '@angular/router';
 import { InicioComponent } from 'src/app/pages/inicio/inicio.component';
 import { ProductosComponent } from 'src/app/pages/productos/productos.component';
 import { AppComponent } from 'src/app/app.component';
-import { ContactoComponent } from 'src/app/pages/contacto/contacto/contacto.component';
+import { ContactoComponent } from 'src/app/pages/contacto/contacto.component';
 
 
 const routes: Routes = [

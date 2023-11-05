@@ -1,7 +1,7 @@
 import { CSP_NONCE, Component, Inject, OnDestroy, OnInit } from '@angular/core';
 import { productosServices } from 'src/services/productos.service';
 import { CarritoComprasService } from '../../../services/compartidoCarritoProducto.service'
-import { Producto } from '../carrito/carrito/interfaceProducto';
+import { Producto } from '../carrito/interfaceProducto';
 import { Router, NavigationEnd } from '@angular/router';
 import { AuthService } from 'src/globalServices/auth.service';
 import { Button } from 'primeng/button';

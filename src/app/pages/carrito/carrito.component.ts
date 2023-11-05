@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { CarritoComprasService } from 'src/services/compartidoCarritoProducto.service';
 import { AuthService } from 'src/globalServices/auth.service';
-import { CarritoService } from '../../../../services/carrito.service';
+import { CarritoService } from '../../../services/carrito.service';
 import { from } from 'rxjs';
 
 

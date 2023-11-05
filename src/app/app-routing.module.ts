@@ -3,8 +3,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 import { ProductosComponent } from './pages/productos/productos.component';
 import { InicioComponent } from './pages/inicio/inicio.component';
-import { ContactoComponent } from './pages/contacto/contacto/contacto.component';
-import { CarritoComponent } from './pages/carrito/carrito/carrito.component';
+import { ContactoComponent } from './pages/contacto/contacto.component';
+import { CarritoComponent } from './pages/carrito/carrito.component';
 import { RegistroComponent } from './pages/registro/registro.component';
 import { LoginComponent } from './pages/login/login.component';
 
